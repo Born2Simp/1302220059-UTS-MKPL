@@ -15,11 +15,13 @@ public class TaxFunction {
 	 */
 	
 	
-	private static int calculateNonTaxableIncome(boolean isMarried, int numberOfChildren) {
-    int nonTaxable = 54000000;
-    if (isMarried) nonTaxable += 4500000;
-    nonTaxable += Math.min(numberOfChildren, 3) * 1500000;
-    return nonTaxable;
-}
+	 private static int calculateNonTaxableIncome(boolean isMarried, int numberOfChildren) {
+		int nonTaxable = 54000000;
+		if (isMarried) nonTaxable += 4500000;
+		nonTaxable += Math.min(numberOfChildren, 3) * 1500000;
+		return nonTaxable;
+	}
 	
+private static final double TAX_RATE = 0.05;
+
 }
