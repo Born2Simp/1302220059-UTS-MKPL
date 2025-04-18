@@ -52,13 +52,23 @@ public class Employee {
 	 * Jika pegawai adalah warga negara asing gaji bulanan diperbesar sebanyak 50%
 	 */
 	
-	private int calculateBaseSalary(int grade) {
-    		switch (grade) {
-        		case 1: return 3000000;
-        		case 2: return 5000000;
-        		case 3: return 7000000;
-       		 default: throw new IllegalArgumentException("Grade tidak valid");
-   		}
+	public void setMonthlySalary(int grade) {	
+		if (grade == 1) {
+			monthlySalary = 3000000;
+			if (isForeigner) {
+				monthlySalary = (int) (3000000 * 1.5);
+			}
+		}else if (grade == 2) {
+			monthlySalary = 5000000;
+			if (isForeigner) {
+				monthlySalary = (int) (3000000 * 1.5);
+			}
+		}else if (grade == 3) {
+			monthlySalary = 7000000;
+			if (isForeigner) {
+				monthlySalary = (int) (3000000 * 1.5);
+			}
+		}
 	}
 	
 	public void setAnnualDeductible(int deductible) {	
